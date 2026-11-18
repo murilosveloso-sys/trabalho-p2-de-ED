@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulador de Heap Binário</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">Estrutura de Dados • P2</p>
+      <h1>Simulador de Heap Binário</h1>
+      <p>Explore Min-Heap e Max-Heap, acompanhando as operações no array e na árvore.</p>
+    </header>
+
+    <section class="toolbar panel">
+      <label>Tipo de heap
+        <select id="mode">
+          <option value="min">Min-Heap (menor na raiz)</option>
+          <option value="max">Max-Heap (maior na raiz)</option>
+        </select>
+      </label>
+      <label>Valor
+        <input id="value" type="number" value="25" step="1">
+      </label>
+      <button id="insertBtn">Inserir</button>
+      <button id="extractBtn" class="secondary">Remover raiz</button>
+      <button id="peekBtn" class="secondary">Consultar raiz</button>
+    </section>
+
+    <section class="toolbar panel">
+      <button id="playBtn">▶ Executar (Play)</button>
+      <button id="stepBtn" class="secondary">Próximo passo</button>
+      <button id="pauseBtn" class="secondary">Pausar</button>
+      <button id="resetBtn" class="secondary">Reiniciar</button>
+      <span id="progress" class="muted">Nenhuma operação em andamento</span>
+    </section>
+
+    <section class="toolbar panel scenarios">
+      <strong>Cenários:</strong>
+      <button data-scenario="medium" class="secondary">Caso médio</button>
+      <button data-scenario="worst" class="secondary">Sequência crescente</button>
+      <button data-scenario="custom" class="secondary">Exemplo customizado</button>
+    </section>
+
+    <section class="metrics">
+      <article class="metric"><span>Operações</span><strong id="ops">0</strong></article>
+      <article class="metric"><span>Elementos</span><strong id="count">0</strong></article>
+      <article class="metric"><span>Raiz / prioridade</span><strong id="root">—</strong></article>
+      <article class="metric"><span>Altura</span><strong id="height">0</strong></article>
+    </section>
+
+    <section class="views">
+      <article class="panel">
+        <h2>Árvore binária completa</h2>
+        <div id="tree" class="tree" aria-live="polite"></div>
+      </article>
+      <article class="panel">
+        <h2>Array subjacente</h2>
+        <div id="array" class="array"></div>
+        <p class="formula">pai = (i − 1) // 2<br>esq = 2i + 1<br>dir = 2i + 2</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Passo atual</h2>
+      <p id="status" class="status">Escolha uma operação ou carregue um cenário.</p>
+      <div class="log-wrap"><ol id="log"><li>O simulador está pronto.</li></ol></div>
+    </section>
+
+    <footer>Abra este arquivo diretamente no navegador. Não é necessário servidor ou instalação.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
