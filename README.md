@@ -1,6 +1,6 @@
 # Trabalho P2 — Heap Binário (Min-Heap e Max-Heap)
 
-> **Vídeo explicativo:** [INSIRA AQUI O LINK PÚBLICO OU NÃO LISTADO]
+> **Vídeo explicativo:** https://drive.google.com/drive/folders/11qkgV4mDTwsqNRe_3999Gw54uI7iKZYJ?usp=drive_link
 
 ## Identificação
 - **Nome completo:** Murilo Silvestre Veloso
@@ -68,16 +68,3 @@ Abra `src/demo/index.html` diretamente no navegador. Não precisa instalar servi
 
 ### Ajuste e validação manual
 A contagem de operações é uma métrica didática definida no projeto: contabiliza comparações entre chaves e movimentações/trocas. Ela não representa tempo de execução em segundos. É importante executar os testes, conferir a raiz e observar se a propriedade do heap é mantida após cada operação. O estudante deve personalizar os dados de identificação e validar o projeto no próprio computador.
-
-## 5. Roteiro sugerido para o vídeo (3 a 7 minutos)
-
-**Parte 1 — Conceito (aprox. 1 minuto)**
-“Olá, meu nome é [nome] e vou apresentar o Tema C, Heap Binário. Um heap é uma árvore binária completa armazenada em um array. No Min-Heap, o menor valor fica na raiz; no Max-Heap, fica o maior. A inserção e a remoção da raiz custam `O(log n)` no pior caso, enquanto consultar a raiz custa `O(1)`.”
-
-**Parte 2 — Simulador (aprox. 2 minutos)**
-Abra `index.html`. Carregue um cenário e mostre que a árvore e o array representam os mesmos dados. Insira um valor que precise subir e narre o *sift-up*. Depois remova a raiz e mostre o último elemento ocupando seu lugar e descendo com *sift-down*. Alterne entre Min-Heap e Max-Heap e explique a diferença de prioridade.
-
-**Parte 3 — Código Python (aprox. 1 a 2 minutos)**
-Abra `src/algoritmo.py`. Mostre `insert`, o cálculo do pai, `_sift_down` e `extract`. Execute `python src/algoritmo.py` no terminal e comente os três testes e o contador de operações.
-
-**Antes de entregar:** substitua nome, RA e link do vídeo; grave sua própria explicação com o simulador e o terminal visíveis; teste o link em uma janela anônima; confira as regras de envio definidas pelo professor.
